@@ -1,0 +1,16 @@
+apiVersion: config.kio.kasten.io/v1alpha1
+kind: Policy
+metadata:
+  name: mysql-backup-policy
+  namespace: kasten-io
+spec:
+  comment: My sample backup policy
+  frequency: '@hourly'
+  retention:
+    hourly: 24
+    daily: 7
+  actions:
+  - action: backup
+  selector:
+    matchLabels:
+      k10.kasten.io/appNamespace: default 
