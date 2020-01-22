@@ -21,6 +21,7 @@ if [ $1 == "init_k10" ]; then
     kubectl annotate --overwrite volumesnapshotclass do-block-storage k10.kasten.io/is-snapshot-class=true
     helm repo add stable https://kubernetes-charts.storage.googleapis.com/
     helm install my-release stable/mysql
+    echo "==========function init_k10 COMPLETED=========="
 fi
 
 if [ $1 == "clean_k10" ]; then
@@ -31,7 +32,7 @@ if [ $1 == "clean_k10" ]; then
     echo "==========Waiting to delete the ns=========="
     sleep 20
     kubectl delete namespace kasten-io
+    echo "==========function clean_k10 COMPLETED=========="
 fi
 
-echo "==========function init_k10 COMPLETED=========="
 sleep 1000
