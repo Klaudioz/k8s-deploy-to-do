@@ -31,15 +31,15 @@ To start the process, a Digital Ocean account has already been created, and a ku
 
     contains an entrypoint script (in the language of your choice) that authorizes a digital ocean account in the container (container should start having already authorized to digital ocean) and sets up kubeconfig. The entrypoint should prep any following command with the digitalocean and kubernetes configurations. You should be able to interact with both the infrastructure (digitalocean) and kubernetes once the entrypoint is finished.
 
-        `export DIGITALOCEAN_ACCESS_TOKEN=<Personal Access Token Goes Here>`
+        export DIGITALOCEAN_ACCESS_TOKEN=<Personal Access Token Goes Here>
 
-        `doctl auth init`
+        doctl auth init
 
-        `mkdir ~/.kube`
+        mkdir ~/.kube
 
-        `doctl kubernetes cluster kubeconfig show claudio-canales > ~/.kube/config` # outputs to stdout only available if a cluster exists
+        doctl kubernetes cluster kubeconfig show claudio-canales > ~/.kube/config # outputs to stdout only available if a cluster exists
 
-        `KUBECONFIG=~/.kube/config`
+        KUBECONFIG=~/.kube/config
 
 - Next create a script (in the language of your choice) add some automation to the container, which will install k10, and an application and take a snapshot based backup :-)
 
