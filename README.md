@@ -1,17 +1,17 @@
 Clone the repo:
-`git clone https://github.com/Klaudioz/do-kasten.git`
+`git clone https://github.com/Klaudioz/k8s-deploy-to-do.git`
 
 Move to the folder:
-`cd do-kasten`
+`cd k8s-deploy-to-do`
 
 Build the container:
-`docker build -t do-kasten .`
+`docker build -t k8s-deploy-to-do .`
 
 Run the container:
-`docker run --rm -it --env DIGITALOCEAN_ACCESS_TOKEN=<your_token> do-kasten init_k10`
+`docker run --rm -it --env DIGITALOCEAN_ACCESS_TOKEN=<your_token> k8s-deploy-to-do init_k10`
 
 To clean the cluster use:
-`docker run --rm -it --env DIGITALOCEAN_ACCESS_TOKEN=<your_token> do-kasten clean_k10`
+`docker run --rm -it --env DIGITALOCEAN_ACCESS_TOKEN=<your_token> k8s-deploy-to-do clean_k10`
 
 Task description:
 
